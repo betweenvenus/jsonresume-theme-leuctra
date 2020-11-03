@@ -25,6 +25,13 @@
 							<h1 class="name">{{name}}</h1>
 							<h2 class="label">{{label}}</h2>
 						</div>
+				{{#if summary}}
+				<section class="section main-summary">
+					<section class="section">
+						<p>{{{summary}}}</p>
+					</section>
+				</section>
+				{{/if}}
 					{{/if}}
 
 				</header>
@@ -44,9 +51,10 @@
 								{{postalCode}},
 							</span>
 							{{/if}}
+							📌<a href="https://en.wikipedia.org/wiki/Atlanta">
 							{{#if city}}
 							<span class="city">
-								{{city}}
+								{{city}},
 							</span>
 							{{/if}}
 							{{#if countryCode}}
@@ -59,25 +67,24 @@
 								{{region}}
 							</span>
 							{{/if}}
+							</a>
 						</div>
 					{{/location}}
 
 					<div id="contact">
 						{{#if website}}
 						<div class="website">
-							<a href="{{website}}">{{website}}</a>
+							<a href="{{website}}">🌎 {{website}}</a>
 						</div>
 						{{/if}}
 						{{#if email}}
 						<div class="email">
-							<span class="fa fa-envelope"></span>
-							<a href="mailto:{{email}}">{{email}}</a>
+							📧 <a href="mailto:{{email}}">{{email}}</a>
 						</div>
 						{{/if}}
 						{{#if phone}}
 						<div class="phone">
-							<span class="fa fa-phone-square"></span>
-							{{phone}}
+							📱 <a href="tel:{{phone}}">{{phone}}</a>
 						</div>
 						{{/if}}
 					</div>
@@ -87,14 +94,11 @@
 					<div id="profiles">
 						{{#each profiles}}
 						<div class="item">
-							{{#if network}}
-							<span class="network fa fa-{{spaceToDash network}} {{spaceToDash network}}"></span>
-							{{/if}}
 							{{#if username}}
 							<span class="username">
 								{{#if url}}
 								<span class="url">
-									<a href="{{url}}">{{username}}</a>
+									💿 <a href="{{url}}">{{username}}</a>
 								</span>
 								{{else}}
 									{{username}}
@@ -107,14 +111,6 @@
 					{{/if}}
 				</section>
 
-				{{#if summary}}
-				<section class="section main-summary">
-					<h2 class='section-title'>About</h2>
-					<section>
-						<p>{{{summary}}}</p>
-					</section>
-					{{/if}}
-				</section>
 
 				</section>
 			{{/resume.basics}}

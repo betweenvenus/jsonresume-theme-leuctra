@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
 /********************************************
 * 	reset from
 * 	http://meyerweb.com/eric/tools/css/reset/
@@ -76,7 +78,7 @@ ul {
 }
 div.item {
 	margin: 1em 0 2em;
-	padding-bottom: 2em;
+	/* padding-bottom: 2em; */
 }
 div.item:last-of-type {
 	margin: 0;
@@ -100,7 +102,7 @@ h3 {
 	font-size: 1rem;
 }
 a {
-	color: #EB5F51;
+	color: blue;
 	text-decoration: none;
 }
 a:hover {
@@ -112,7 +114,7 @@ body {
 	background: #f2f2f2;
 	line-height: 1.6;
 	font-size: 13px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Archivo", Helvetica, Arial, sans-serif;
 }
 
 #resume {
@@ -143,6 +145,13 @@ header img {
 
 header .name {
 	line-height: 1;
+}
+
+header#header .name {
+	font-family: 'Archivo Black';
+	text-decoration: underline wavy blue;
+	display: inline-block;
+	margin-bottom: .5em;
 }
 
 header .label {
@@ -183,8 +192,8 @@ header::after {
 h2.section-title {
 	text-align: left;
 	font-size: 1rem;
-	font-weight: 400;
-	color: #757575;
+	font-weight: 800;
+	color: black;
 	padding: 1em 1rem 0;
 	margin-bottom: 0.1275em;
 }
@@ -203,7 +212,7 @@ h2.section-title {
 	border-bottom: none;
 }
 
-.website::before {
+/* .website::before {
 	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: inherit;
@@ -215,7 +224,7 @@ h2.section-title {
 	margin-right: 0.25em;
 	text-align: center;
 	content: '\f14c';
-}
+} */
 
 #profiles, #skills, #interests, #languages {
 	display: -webkit-box;
@@ -250,7 +259,7 @@ h2.section-title {
 	font-style: italic;
 }
 
-.courses li, .keywords li{
+/* .courses li, .keywords li{
 	display: inline-block;
 	background: #f0f0f0;
 	font-size: 0.9em;
@@ -260,6 +269,17 @@ h2.section-title {
 	border-bottom: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 	border-radius: 3px;
+} */
+
+.keywords li {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid blue;
+	font-size: 0.9em;
+	line-height: 1;
+	color: blue;
+	padding: 0.4em 0.8em;
+	border-radius: 20px;
 }
 
 #publications .date {
@@ -510,4 +530,31 @@ h2.section-title {
 		border-bottom: 1px solid #eee;
 	}
 
+}
+
+/* Highlights section (not in original theme for some reason? */
+
+.highlights {
+	list-style-type: initial;
+	list-style: initial inside none;
+}
+
+.highlights li {
+	margin: .5em 0;
+	list-style-position: inside;
+}
+
+#basics, #contact {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 75%;
+}
+
+#basics a {
+	display: inline-block;
+	margin: 0 .5em .75em 0;
+}
+
+h3.name {
+	font-weight: 400;
 }

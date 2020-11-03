@@ -7,8 +7,8 @@ function render(resume) {
 	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
 	
 	return Handlebars.compile(tpl)({
-		css: css,
-		resume: resume
+		css,
+		resume
 	});
 }
 
