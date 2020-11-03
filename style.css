@@ -558,3 +558,17 @@ h2.section-title {
 h3.name {
 	font-weight: 400;
 }
+
+.header-wrapper {
+	display: flex;
+	
+}
+
+.header-wrapper > div {
+	flex: 1 0 50%;
+}
+
+.keywords {
+	display: flex;
+	flex-wrap: wrap;
+}
