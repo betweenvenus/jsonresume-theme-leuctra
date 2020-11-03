@@ -566,6 +566,7 @@ h3.name {
 
 .header-wrapper > div {
 	flex: 1 0 50%;
+	max-width: 50%;
 }
 
 .keywords {
@@ -573,8 +574,31 @@ h3.name {
 	flex-wrap: wrap;
 }
 
+#skills {
+	border: 1px solid blue;
+	max-width: 100%;
+}
+
+#skills .item {
+	display: flex;
+	align-items: center;
+	margin: 1em;
+}
+
 #skills .name {
 	font-family: 'Archivo Black';
 	text-transform: uppercase;
-	writing-mode: vertical-lr;
+	writing-mode: sideways-lr;
+	line-height: 1em;
+	margin-right: 1em;
+}
+
+#skills .item .keywords {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+#skills .item .keywords li {
+	margin: 0 .5em .5em 0;
 }

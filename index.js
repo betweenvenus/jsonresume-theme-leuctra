@@ -53,3 +53,10 @@ Handlebars.registerHelper('DMY', function(date) {
 	var d = date.toString();
   return moment(d).format('D MMMM YYYY');
 });
+
+// Split strings at spaces 
+
+Handlebars.registerHelper('splitSpaces', (string) => {
+  const replaced = string.replace(' ', '<br />');
+  return replaced;
+})
